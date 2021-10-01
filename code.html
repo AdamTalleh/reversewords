@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>A coding project by Adam Talleh</title>
+    <title>Reverse Words! A coding project by Adam Talleh</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,7 +12,9 @@
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Gemunu+Libre:wght@300&family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Gemunu+Libre:wght@300&family=Oswald:wght@300&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="css/site.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/favicon.png">
@@ -60,9 +62,40 @@
             <div class="row row-cols-1 row-cols-lg-2">
                 <div class="col-lg-8">
                     <pre class="line-numbers"><code class="language-javascript">
-                //call helloworld 
-                function HelloWorld(){
-                alert("hello world!");
+                        // get the string from the page
+                        //controller function
+                        function getValue(){
+                            document.getElementById("alert").classList.add("invisible");
+                            let userString = document.getElementById("userString").value;
+                            let revString = reverseString(userString);
+                            displayString(revString);
+                        }
+                        
+                        
+                        //reverse the string
+                        //logic function
+                        function reverseString(userString){
+                        
+                        let revString =[];
+                        
+                        //reverse a string using a for loop
+                        
+                        for (let index = userString.length -1; index >= 0; index--) {
+                            revString += userString[index];
+                            
+                        }
+                        return revString;
+                        }
+                        
+                        //display the reversed string to the user 
+                        //view function
+                        function displayString(revString){
+                         // write to the page
+                         document.getElementById("msg").innerHTML=`Your Reversed String is : ${revString}`;
+                        
+                         //show the alert box
+                         document.getElementById("alert").classList.remove("invisible");
+                        }
      
                 }
             </code>
@@ -81,105 +114,105 @@
 
     <!-- ==Footer section=====-->
     <footer class="site-footer">
-        
-     <div class="container">
-        
-         
-    <section class="section-subscribe">
-    
-         <div class="row justify-content-center align items-center">
-             <div class ="col-md-12 mb-4">
-                 <h1 class="heading text-white">
-                     Get news &amp; updates
-                 </h1>
-             </div>
-             <div class="col-md-12">
-                 <form action="" methods="POST">
-                     <div class="row">
-                         <div class="col-md-4 mb-4">
-                             <input type="text" class="form-control" placeholder="Your name here">
-                         </div>
-                         <div class="col-md-4 mb-4">
-                             <input type="email" class="form-control" placeholder="Your email here">
-                         </div>
-                         <div class="col-md-4 mb-4">
-                             <input type="submit" class="btn btn-secondary w-100" placeholder="Subs">
-                         </div>
-                     </div>
-                 </form>
-             </div>
-         </div>
-     
-    </section>
-    <div class="row mb-5">
-        <div class="col-md-3 mb-5">
-            <h2>About us</h2>
-            <p>I'm Adam Talleh a software engineer</p>
-            <p><a href="#">Click here To learn more</a></p>
-        </div>
-        <div class="col-md-3 mb-5">
-            <h2>Contact &amp; Address</h2>
-            <ul class="list-unstyled footer-link">
-                <li class="d-flex">
-                    <span class="me-3">Address:</span>
-                    <span class="text-white"> Via Giovanni Giolitti ,325,Rome,Italy</span>
-                </li>
-                <li class="d-flex">
-                    <span class="me-3">Telephone:</span>
-                    <span class="text-white"> +39-3279-060716</span>
-                </li>
-                <li class="d-flex mt-4">
-                    <span class="me-3">Email:</span>
-                    <span class="text-white"> eng.adam17@gmail.com</span>
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-3 mb-5">
-            <h2>Quick Links</h2>
-            <ul class="list-unstyled footer-link">
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">My blog</a></li>
-                <li><a href="#">Opinions</a></li>
-                <li><a href="#">About Me </a></li>
-                <li><a href="#">Contact Me</a></li>
-            </ul>
-        </div>
 
-        <div class="col-md-3">
-            <div class="row">
-            <h2>Social media</h2>
-            <ul class="list-unstyled footer-link d-flex footer-social">
-                <li><a href="#"><span class="fa fa-github "></span></a></li>
-                <li><a href="#"><span class="fa fa-linkedin " ></i></span></a></li>
-                <li><a href="#"><span class="fa fa-twitter "></span></a></li>
-                <li><a href="#"><span class="fa fa-youtube "></span></a></li>
-                <li><a href="#"><span class="fa fa-facebook "></span></a></li>
-            </ul>
+        <div class="container">
+
+
+            <section class="section-subscribe">
+
+                <div class="row justify-content-center align items-center">
+                    <div class="col-md-12 mb-4">
+                        <h1 class="heading text-white">
+                            Get news &amp; updates
+                        </h1>
+                    </div>
+                    <div class="col-md-12">
+                        <form action="" methods="POST">
+                            <div class="row">
+                                <div class="col-md-4 mb-4">
+                                    <input type="text" class="form-control" placeholder="Your name here">
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <input type="email" class="form-control" placeholder="Your email here">
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <input type="submit" class="btn btn-secondary w-100" placeholder="Subs">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </section>
+            <div class="row mb-5">
+                <div class="col-md-3 mb-5">
+                    <h2>About us</h2>
+                    <p>I'm Adam Talleh a software engineer</p>
+                    <p><a href="#">Click here To learn more</a></p>
+                </div>
+                <div class="col-md-3 mb-5">
+                    <h2>Contact &amp; Address</h2>
+                    <ul class="list-unstyled footer-link">
+                        <li class="d-flex">
+                            <span class="me-3">Address:</span>
+                            <span class="text-white"> Via Giovanni Giolitti ,325,Rome,Italy</span>
+                        </li>
+                        <li class="d-flex">
+                            <span class="me-3">Telephone:</span>
+                            <span class="text-white"> +39-3279-060716</span>
+                        </li>
+                        <li class="d-flex mt-4">
+                            <span class="me-3">Email:</span>
+                            <span class="text-white"> eng.adam17@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-5">
+                    <h2>Quick Links</h2>
+                    <ul class="list-unstyled footer-link">
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">My blog</a></li>
+                        <li><a href="#">Opinions</a></li>
+                        <li><a href="#">About Me </a></li>
+                        <li><a href="#">Contact Me</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="row">
+                        <h2>Social media</h2>
+                        <ul class="list-unstyled footer-link d-flex footer-social">
+                            <li><a href="#"><span class="fa fa-github "></span></a></li>
+                            <li><a href="#"><span class="fa fa-linkedin "></i></span></a></li>
+                            <li><a href="#"><span class="fa fa-twitter "></span></a></li>
+                            <li><a href="#"><span class="fa fa-youtube "></span></a></li>
+                            <li><a href="#"><span class="fa fa-facebook "></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 justify-content-end align-content-end ">
+
+                            <img src="img/twitter_profile_image.png" alt="AT logo" height="120" width="120">
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-md-center text-left">
+                        <p class="text-white">copyrights reserved &copy;2021</p>
+                    </div>
+
+                </div>
             </div>
-            <div class="row">
-                <div class="col-md-3 justify-content-end align-content-end ">
-            
-            <img src="img/twitter_profile_image.png" alt="AT logo" height="120" width="120" >
-                
-          
-                 </div>
-            </div>
+
+
         </div>
-        <div class="row">
-            <div class="col-12 text-md-center text-left">
-                <p class="text-white">copyrights reserved &copy;2021</p>
-            </div>
-            
-        </div>
-    </div>
 
 
-</div>
+    </footer>
 
-
-</footer>
-
-     <!-- <footer class="footer mt-auto py-3  ">
+    <!-- <footer class="footer mt-auto py-3  ">
     <div class="container-fluid ">
        <div class="row ">
            <div class="col d-flex order-last order-lg-first text-light">
@@ -201,7 +234,7 @@
        </div>
     </div>
 </footer>  -->
-    
+
 
     <!-- Bootstrap JS -->
 
